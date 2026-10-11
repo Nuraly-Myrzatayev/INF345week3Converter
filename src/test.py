@@ -18,3 +18,8 @@ if "celsius is" in getRequestText("/converter"):
     passedTests += 1
 
 print(f"TESTS: {passedTests}/{amountOfTests}")
+
+if passedTests == amountOfTests:
+    sys.exit(0)
+else:
+    sys.exit(1)
