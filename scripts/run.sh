@@ -7,4 +7,4 @@ set -euo pipefail
 #is forcing anything to get redirected where we can run server.py
 cd "$(dirname "$0")/../src"
 
-python3 server.py
+python3 server240107075.py

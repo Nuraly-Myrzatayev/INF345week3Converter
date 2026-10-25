@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/../src"
 
-python3 server.py&
+python3 server240107075.py&
 #i ran server in background to test it
 #then i save it's PID
 LASTPID=$!
