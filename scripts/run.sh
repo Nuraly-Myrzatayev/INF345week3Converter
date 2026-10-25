@@ -6,5 +6,7 @@ set -euo pipefail
 #btw $0 is the current filename so run.sh, so this line
 #is forcing anything to get redirected where we can run server.py
 cd "$(dirname "$0")/../src"
+#kill the server before starting in case our server is already running in the background
+pkill -f server240107075.py
 
 python3 server240107075.py
