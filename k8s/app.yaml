@@ -1,9 +1,3 @@
-# Week 8 lab, Step 6. YOUR M3 image on YOUR cluster - the first step of M4.
-# Fill the four ____ blanks, then:
-#   kubectl apply -f playground/mine.yaml
-#   kubectl rollout status deployment/mine --timeout=120s
-#   kubectl port-forward service/mine 8080:80      and in another terminal:
-#   curl -i localhost:8080/healthz
 apiVersion: apps/v1
 kind: Deployment
 metadata:
