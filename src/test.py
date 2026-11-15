@@ -11,7 +11,7 @@ def getRequestText(ending):
     return requests.get(f"http://127.0.0.1:{os.environ.get("PORT", "8080")}{ending}").text
     
 
-if getRequestText("/") == "Celsius to Fahrenheit converter":
+if getRequestText("/") == os.environ.get("MSGSEC", "have a great day sir!"):
     passedTests += 1
 if getRequestText("/healthz") == "ok":
     passedTests += 1

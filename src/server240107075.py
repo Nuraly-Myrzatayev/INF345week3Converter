@@ -3,12 +3,14 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 celsius = 10
 
+messageSecret = os.environ.get("MSGSEC", "have a great day sir!")
+
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/healthz":
             self._send(200, b"ok")
         elif self.path == "/":
-            self._send(200, b"Celsius to Fahrenheit converter")
+            self._send(200, messageSecret.encode())
         elif self.path == "/converter":
             self._send(200, str(f"{celsius} celsius is {(celsius * 1.8) + 32} fahrenheit").encode())
         else:
